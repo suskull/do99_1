@@ -1,0 +1,271 @@
+.l4_container {
+    background-image: url('/assets/images/l4_bg.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.l4_container img {
+    width: 100%;
+}
+
+.l4_top {}
+
+.l4_leaderBoard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.l4_playerLeaderBoard {}
+
+.l4_dealerLeaderBoard {}
+
+.l4_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.l4_logo {
+    width: 33%;
+}
+
+.l4_text {
+    width: 75%;
+}
+
+.l4_btnGift {
+    width: 50%;
+    cursor: pointer;
+    animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+.l4_btnContainer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 85%;
+    justify-content: center;
+}
+
+.l4_btn {
+    cursor: pointer;
+}
+
+.l4_bottom {
+    margin-top: 24px;
+}
+
+.l4_items {}
+
+.l4_social {
+    display: flex;
+    align-items: flex-start;
+}
+
+.l4_socialIcon {
+    width: 33%;
+}
+
+.input-info {
+    padding-left: 10px;
+    border-radius: 12px;
+    width: 80%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border: none;
+    margin-bottom: 15px;
+    background-color: #d6d6d6;
+}
+
+.l4_mobileForm {
+    display: none;
+}
+
+#form-modal {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.l4_formPc {
+    display: block;
+    width: 33%;
+    position: relative;
+    margin: 10% auto 0;
+}
+
+.l4_formBtns {
+    position: absolute;
+    top: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    width: 100%;
+}
+
+.l4_formBtn {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 48%;
+    flex: 1;
+    height: 4vw;
+    cursor: pointer;
+}
+
+.l4_btnClose {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -5px;
+    right: -30px;
+    cursor: pointer;
+}
+
+
+.l4_formBtnLogin {
+    background-image: url('/assets/images/l4_btnBg.png');
+}
+
+.l4_formBtnText {
+    width: 67%;
+
+    /* text-shadow: 2px 0 #F7FF0A, -2px 0 #F7FF0A, 0 2px #F7FF0A, 0 -2px #F7FF0A,
+        1px 1px #F7FF0A, -1px -1px #F7FF0A, 1px -1px #F7FF0A, -1px 1px #F7FF0A; */
+}
+
+.l4_formBtnTextRegister {
+    margin-top: -4px;
+}
+
+.l4_btnNotActive {}
+
+.l4_formBtnTextLogin {
+    width: 82%;
+}
+
+
+.l4_form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.l4_form-register {
+    display: none;
+}
+
+.l4_submit {
+    position: absolute;
+    bototm: 0;
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.l4_submitRegister {
+    display: none;
+}
+
+.l4_itemContainer {
+    height: 100px;
+    /* width: 100px; */
+}
+
+
+
+@media screen and (max-width: 990px) {
+
+    .l4_mobileForm {
+        display: block;
+    }
+
+    .l4_btnClose {
+        display: none;
+    }
+
+    .l4_container {
+        background-image: url('/assets/images/l4_bg_mobile.png');
+    }
+
+    .l4_leaderBoard {
+        display: none;
+    }
+
+    .l4_mobileForm {
+        position: relative;
+    }
+
+    .l4_btn {
+        animation: zoom-in-zoom-out 1s ease infinite;
+    }
+
+    .l4_btnGift {
+        display: none;
+    }
+
+    .l4_items {
+        display: none;
+    }
+
+    .l4_social {
+        justify-content: center;
+    }
+
+    .l4_socialIcon {
+        width: 20%;
+    }
+
+
+    .l4_logo {
+        width: 40%;
+    }
+
+    .l4_text {
+        width: 100%;
+    }
+
+    .l4_btnContainer {
+        width: 90%;
+        margin-top: 16px;
+        gap: 8px;
+    }
+
+    .l4_bottom {
+        margin-top: 8px;
+    }
+
+    .l4_formBtn {
+        height: 50px;
+    }
+
+
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.15, 1.15);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}

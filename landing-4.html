@@ -1,0 +1,313 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ĐỎ 99 CLUB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="assets/images/icon/icon.png">
+    <!-- All stylesheet and icons css  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/landing-4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-custom.css?v=1">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+
+
+</head>
+
+<body>
+    <!--Body Start Here-->
+    <div class="container-fluid background-image l4_container">
+        <div class="row l4_top">
+            <div class="col-lg-3 col-md-0 l4_leaderBoard">
+                <div class="playerLeaderBoard">
+                    <img src="assets/images/l4_player-leaderboard.png" alt="do99" />
+                </div>
+                <div class="dealerLeaderBoard">
+                    <img src="assets/images/l4_dealer-leaderboard.png" alt="do99" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 l4_main">
+                <div class="l4_logo">
+                    <img src="assets/images/logo.png" alt="do99" />
+                </div>
+                <div class="l4_text">
+                    <img src="assets/images/l4_text.png" alt="sam xe tau nha" />
+                </div>
+                <div class="l4_mobileForm">
+                    <img src="assets/images/l4_formBg.png" alt="sam xe tau nha" />
+                    <div class="l4_formBtns">
+                        <div class="l4_formBtn l4_formBtnLogin" id="btn-login" onclick="onClickLogin()">
+                            <div class="l4_formBtnText l4_formBtnTextLogin">
+                                <img class="l4_loginText" src="assets/images/l4_btnLogin-active.png"
+                                    alt="sam xe tau nha" />
+                            </div>
+
+                        </div>
+                        <div class="l4_formBtn l4_formBtnRegister l4_formBtnTextRegister" id="btn-register"
+                            onclick="onClickRegister()">
+                            <div class="l4_formBtnText l4_btnNotActive">
+                                <img class="l4_registerText" src="assets/images/l4_btnRegister.png"
+                                    alt="sam xe tau nha" />
+                            </div>
+                        </div>
+                    </div>
+                    <form class="l4_form l4_form-register" id="form-register">
+                        <input id="AccountName" name="AccountName" class="input-info" type="text"
+                            placeholder="&#xf007; Tên tài khoản" style="font-family:Arial, FontAwesome" required />
+
+                        <input id="Password" name="Password" class="input-info" type="password"
+                            placeholder="&#xf023; Mật khẩu" style="font-family:Arial, FontAwesome" required />
+
+                        <input id="Password2" name="Password2" class="input-info" type="password"
+                            placeholder="&#xf023; Nhập lại mật khẩu" style="font-family:Arial, FontAwesome" required />
+                    </form>
+                    <form class="l4_form l4_form-login" id="form-login">
+                        <input id="AccountName" name="AccountName" class="input-info" type="text"
+                            placeholder="&#xf007; Tên tài khoản" style="font-family:Arial, FontAwesome" required />
+
+                        <input id="Password" name="Password" class="input-info" type="password"
+                            placeholder="&#xf023; Mật khẩu" style="font-family:Arial, FontAwesome" required />
+                    </form>
+
+                    <div class="l4_submit l4_submitLogin" id="form-login_btn">
+                        <img src="assets/images/l4_playnow.png" alt="">
+                    </div>
+                    <div class="l4_submit l4_submitRegister" id="form-register_btn">
+                        <img src="assets/images/l4_btn-gift.png" alt="">
+                    </div>
+
+                </div>
+                <div class="l4_btnGift" id="getGiftCode" onclick="showFormModal()">
+                    <img src="assets/images/l4_btn-gift.png" alt="gift 99k" />
+                </div>
+                <div class="l4_btnContainer">
+                    <div class="l4_btn">
+                        <img src="assets/images/l4_btn-android.png" alt="gift 99k" />
+                    </div>
+
+                    <div class="l4_btn">
+                        <img src="assets/images/l4_btn-ios.png" alt="gift 99k" />
+
+                    </div>
+                    <div class="l4_btn">
+                        <img src="assets/images/l4_btn-playnow.png" alt="gift 99k" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row l4_bottom">
+            <div class="col-lg-3 "></div>
+            <div class="col-lg-6 l4_items">
+                <div class="l4_swiper-grid ">
+                    <div class="swiper mySwiper">
+                        <div class="lb_swiper-wrapper swiper-wrapper">
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/3-cay.png" />
+                                </div>
+                            </div>
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/avenger.png" />
+                                </div>
+                            </div>
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/keono.png" />
+                                </div>
+                            </div>
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/lo-de.png" />
+                                </div>
+                            </div>
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/magic.png" />
+                                </div>
+                            </div>
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/mini-poker.png" />
+                                </div>
+                            </div>
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/tai-xiu.png" />
+                                </div>
+                            </div>
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/than-xoc.png" />
+                                </div>
+                            </div>
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/thien-dia.png" />
+                                </div>
+                            </div>
+                            <div class="lb_swiper-slide  swiper-slide" onclick="window.open('#','mywindow');">
+                                <div class="l4_itemContainer">
+                                    <img class="lb_colItem" src="assets/images/group3/trading.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 l4_social">
+                <div class="l4_socialIcon">
+                    <img src="assets/images/l4_facebook.png" alt="social" />
+                </div>
+                <div class="l4_socialIcon">
+                    <img src="assets/images/l4_tele.png" alt="social" />
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="form-modal">
+            <div class="l4_mobileForm l4_formPc">
+                <img src="assets/images/l4_formBg.png" alt="sam xe tau nha" />
+                <div class="l4_btnClose" onclick="closeModal()">
+                    <img src="assets/images/l4_btnClose.png" alt="close" />
+                </div>
+                <div class="l4_formBtns">
+                    <div class="l4_formBtn l4_formBtnLogin" id="btn-login" onclick="onClickLogin()">
+                        <div class="l4_formBtnText l4_formBtnTextLogin">
+                            <img class="l4_loginText" src="assets/images/l4_btnLogin-active.png" alt="sam xe tau nha" />
+                        </div>
+
+                    </div>
+                    <div class="l4_formBtn l4_formBtnRegister l4_formBtnTextRegister" id="btn-register"
+                        onclick="onClickRegister()">
+                        <div class="l4_formBtnText l4_btnNotActive">
+                            <img class="l4_registerText" src="assets/images/l4_btnRegister.png" alt="sam xe tau nha" />
+                        </div>
+                    </div>
+                </div>
+                <form class="l4_form l4_form-register" id="form-register" onsubmit="return onSubmitStep1();">
+                    <input id="AccountName" name="AccountName" class="input-info" type="text"
+                        placeholder="&#xf007; Tên tài khoản" style="font-family:Arial, FontAwesome" required />
+
+                    <input id="Password" name="Password" class="input-info" type="password"
+                        placeholder="&#xf023; Mật khẩu" style="font-family:Arial, FontAwesome" required />
+
+                    <input id="Password2" name="Password2" class="input-info" type="password"
+                        placeholder="&#xf023; Nhập lại mật khẩu" style="font-family:Arial, FontAwesome" required />
+                </form>
+                <form class="l4_form l4_form-login" id="form-login" onsubmit="return onSubmitStep1();">
+                    <input id="AccountName" name="AccountName" class="input-info" type="text"
+                        placeholder="&#xf007; Tên tài khoản" style="font-family:Arial, FontAwesome" required />
+
+                    <input id="Password" name="Password" class="input-info" type="password"
+                        placeholder="&#xf023; Mật khẩu" style="font-family:Arial, FontAwesome" required />
+                </form>
+
+                <div class="l4_submit l4_submitLogin" id="form-login_btn">
+                    <img src="assets/images/l4_playnow.png" alt="">
+                </div>
+                <div class="l4_submit l4_submitRegister" id="form-register_btn">
+                    <img src="assets/images/l4_btn-gift.png" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- All Needed JS -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 6,
+            spaceBetween: 5,
+            showsPagination: false,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        let isLogin = true
+        const imageUrl = '/assets/images/l4_btnBg.png'
+        onClickLogin = () => {
+            // window.open('#','mywindow');
+            let btnRegister = $(".l4_formBtnRegister")
+            let btnLogin = $(".l4_formBtnLogin")
+            let formRegister = $(".l4_form-register")
+            let formRegisterBtn = $(".l4_submitRegister")
+            let formLogin = $(".l4_form-login")
+            let formLoginBtn = $(".l4_submitLogin")
+            const formLoginText = $(".l4_loginText")
+            const formRegisterText = $(".l4_registerText")
+
+
+
+            btnLogin.css('background-image', 'url(' + imageUrl + ')')
+            btnRegister.css('background-image', 'none')
+
+
+            formLogin.css('display', 'block')
+            formLoginBtn.css('display', 'block')
+            formRegister.css('display', 'none')
+            formRegisterBtn.css('display', 'none')
+            formLoginText.attr('src', 'assets/images/l4_btnLogin-active.png')
+            formRegisterText.attr('src', 'assets/images/l4_btnRegister.png')
+        }
+
+        onClickRegister = () => {
+            // window.open('#','mywindow');
+            let btnRegister = $(".l4_formBtnRegister")
+            let btnLogin = $(".l4_formBtnLogin")
+            let formRegister = $(".l4_form-register")
+            let formRegisterBtn = $(".l4_submitRegister")
+            let formLogin = $(".l4_form-login")
+            let formLoginBtn = $(".l4_submitLogin")
+            const formLoginText = $(".l4_loginText")
+            const formRegisterText = $(".l4_registerText")
+
+
+            console.log(formLoginText, 'formLoginText')
+
+
+            btnRegister.css('background-image', 'url(' + imageUrl + ')')
+            btnLogin.css('background-image', 'none')
+            formLogin.css('display', 'none')
+            formLoginBtn.css('display', 'none')
+            formRegister.css('display', 'block')
+            formRegisterBtn.css('display', 'block')
+            formLoginText.attr('src', 'assets/images/l4_btnLogin.png')
+            formRegisterText.attr('src', 'assets/images/l4_btnRegister-active.png')
+
+
+        }
+
+        showFormModal = () => {
+            const modal = $("#form-modal");
+            modal.css('display', 'block')
+        }
+
+        closeModal = () => {
+            const modal = $("#form-modal");
+            modal.css('display', 'none')
+        }
+
+    </script>
+</body>
+
+</html>
