@@ -17,9 +17,13 @@
     justify-content: flex-end;
 }
 
-.l4_playerLeaderBoard {}
+.l4_playerLeaderBoard {
+    position: relative;
+}
 
-.l4_dealerLeaderBoard {}
+.l4_dealerLeaderBoard {
+    position: relative;
+}
 
 .l4_main {
     display: flex;
@@ -52,6 +56,7 @@
 
 .l4_btn {
     cursor: pointer;
+    animation: zoom-in-zoom-out 1s ease infinite;
 }
 
 .l4_bottom {
@@ -175,7 +180,18 @@
     bottom: -17px;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
 }
+
+.l4_submit :hover {
+    transform: scale(1.1);
+}
+
+.l4_submit :active {
+    transform: scale(1.2);
+}
+
+
 
 .l4_submitRegister {
     display: none;
@@ -184,6 +200,35 @@
 .l4_itemContainer {
     height: 100px;
     /* width: 100px; */
+}
+
+.l4_leaderBoardContent {
+    position: absolute;
+    top: 4.6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    left: 5vw;
+    font-size: 1.5vw;
+    width: 70%;
+}
+
+.l4_leaderBoardRow {
+    display: flex;
+    justify-content: space-between;
+    font-family: UTM Colossalis;
+    font-weight: 800;
+}
+
+.l4_leaderBoardTitle {
+    color: white;
+}
+
+.l4_leaderBoardScore {
+    background: #FCEABB;
+    background: linear-gradient(to top, #FCEABB 0%, #FCCD4D 50%, #F8B500 51%, #FBDF93 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -263,6 +308,20 @@
 
     50% {
         transform: scale(1.15, 1.15);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes zoom-in-zoom-out_mini {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.05, 1.05);
     }
 
     100% {
