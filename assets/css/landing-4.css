@@ -3,6 +3,16 @@
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.l4_mainAnimation {
+    position: absolute;
+    bottom: 0px;
+    right: -8%;
+    width: 40%;
+    object-fit: contain;
 }
 
 .l4_container img {
@@ -68,6 +78,7 @@
 .l4_social {
     display: flex;
     align-items: flex-start;
+    z-index: 9;
 }
 
 .l4_socialIcon {
@@ -103,6 +114,11 @@
     width: 33%;
     position: relative;
     margin: 10% auto 0;
+}
+
+.l4_secondAnimtion {
+    position: absolute;
+    left: -25vw;
 }
 
 .l4_formBtns {
@@ -232,6 +248,19 @@
 }
 
 
+.l4_secondAnimtion {
+    position: absolute;
+    left: -50%;
+}
+
+@media screen and (max-width: 1366px) {
+
+    .l4_secondAnimtion {
+        position: absolute;
+        left: -25vw;
+    }
+}
+
 
 @media screen and (max-width: 990px) {
 
@@ -245,6 +274,10 @@
 
     .l4_container {
         background-image: url('/assets/images/l4_bg_mobile.png');
+    }
+
+    .l4_mainAnimation {
+        display: none;
     }
 
     .l4_leaderBoard {
