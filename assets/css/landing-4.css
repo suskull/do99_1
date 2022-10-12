@@ -19,7 +19,9 @@
     width: 100%;
 }
 
-.l4_top {}
+.l4_top {
+    padding-top: 16px;
+}
 
 .l4_leaderBoard {
     display: flex;
@@ -43,15 +45,15 @@
 }
 
 .l4_logo {
-    width: 33%;
+    width: 20%;
 }
 
 .l4_text {
-    width: 75%;
+    width: 65%;
 }
 
 .l4_btnGift {
-    width: 50%;
+    width: 35%;
     cursor: pointer;
     animation: zoom-in-zoom-out 1s ease infinite;
 }
