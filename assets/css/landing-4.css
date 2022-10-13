@@ -56,6 +56,7 @@
     width: 35%;
     cursor: pointer;
     animation: zoom-in-zoom-out 1s ease infinite;
+    margin-top: -32px;
 }
 
 .l4_btnContainer {
@@ -218,7 +219,7 @@
 
 
 
-.l4_submitRegister {
+.l4_submitLogin {
     display: none;
 }
 
@@ -259,7 +260,8 @@
 
 .l4_secondAnimtion {
     position: absolute;
-    left: -50%;
+    left: -25vw;
+    width: 100%;
 }
 
 
