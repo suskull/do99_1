@@ -68,7 +68,7 @@
 
 .l4_btn {
     cursor: pointer;
-    animation: zoom-in-zoom-out 1s ease infinite;
+    animation: zoom-in-zoom-out_mini 1s ease infinite;
 }
 
 .l4_bottom {
@@ -155,9 +155,12 @@
     cursor: pointer;
 }
 
+.l4_formBtnRegister {
+    background-image: url('/assets/images/l4_btnBg.png');
+}
 
 .l4_formBtnLogin {
-    background-image: url('/assets/images/l4_btnBg.png');
+    /* background-image: url('/assets/images/l4_btnBg.png'); */
 }
 
 .l4_formBtnText {
@@ -189,6 +192,10 @@
 }
 
 .l4_form-register {
+    /* display: none; */
+}
+
+.l4_form-login {
     display: none;
 }
 
@@ -255,6 +262,36 @@
     left: -50%;
 }
 
+
+
+.captchaContainer {
+    width: 82%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.captchaImage {
+    border-radius: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border: none;
+    margin-bottom: 15px;
+    background-color: #d6d6d6;
+    float: right;
+    width: 100px !important;
+    height: 34px;
+}
+
+.input-captcha {
+    float: left;
+    width: calc(100% - 120px);
+}
+
+
 @media screen and (max-width: 1366px) {
 
     .l4_secondAnimtion {
@@ -292,6 +329,7 @@
 
     .l4_btn {
         animation: zoom-in-zoom-out 1s ease infinite;
+        width: 25%;
     }
 
     .l4_btnGift {
@@ -323,6 +361,7 @@
         width: 90%;
         margin-top: 16px;
         gap: 8px;
+        justify-content: space-around;
     }
 
     .l4_bottom {
@@ -342,7 +381,7 @@
     }
 
     50% {
-        transform: scale(1.15, 1.15);
+        transform: scale(1.3, 1.3);
     }
 
     100% {

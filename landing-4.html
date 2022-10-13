@@ -95,18 +95,18 @@
                 <div class="l4_mobileForm">
                     <img src="assets/images/l4_formBg.png" alt="sam xe tau nha" />
                     <div class="l4_formBtns">
-                        <div class="l4_formBtn l4_formBtnLogin" id="btn-login" onclick="onClickLogin()">
-                            <div class="l4_formBtnText l4_formBtnTextLogin">
-                                <img class="l4_loginText" src="assets/images/l4_btnLogin-active.png"
-                                    alt="sam xe tau nha" />
-                            </div>
 
-                        </div>
+
                         <div class="l4_formBtn l4_formBtnRegister l4_formBtnTextRegister" id="btn-register"
                             onclick="onClickRegister()">
                             <div class="l4_formBtnText l4_btnNotActive">
-                                <img class="l4_registerText" src="assets/images/l4_btnRegister.png"
+                                <img class="l4_registerText" src="assets/images/l4_btnRegister-active.png"
                                     alt="sam xe tau nha" />
+                            </div>
+                        </div>
+                        <div class="l4_formBtn l4_formBtnLogin" id="btn-login" onclick="onClickLogin()">
+                            <div class="l4_formBtnText l4_formBtnTextLogin">
+                                <img class="l4_loginText" src="assets/images/l4_btnLogin.png" alt="sam xe tau nha" />
                             </div>
                         </div>
                     </div>
@@ -119,6 +119,11 @@
 
                         <input id="Password2" name="Password2" class="input-info" type="password"
                             placeholder="&#xf023; Nhập lại mật khẩu" style="font-family:Arial, FontAwesome" required />
+                        <div class="captchaContainer">
+                            <img id="captcha" class="captchaImage" src="" />
+                            <input id="inputCaptcha" name="inputCaptcha" class="input-info input-captcha" type="text"
+                                placeholder="Captcha" style="font-family:Arial, FontAwesome" required />
+                        </div>
                     </form>
                     <form class="l4_form l4_form-login" id="form-login">
                         <input id="AccountName" name="AccountName" class="input-info" type="text"
@@ -230,17 +235,18 @@
                     <img src="assets/images/l4_btnClose.png" alt="close" />
                 </div>
                 <div class="l4_formBtns">
-                    <div class="l4_formBtn l4_formBtnLogin" id="btn-login" onclick="onClickLogin()">
-                        <div class="l4_formBtnText l4_formBtnTextLogin">
-                            <img class="l4_loginText" src="assets/images/l4_btnLogin-active.png" alt="sam xe tau nha" />
-                        </div>
-
-                    </div>
                     <div class="l4_formBtn l4_formBtnRegister l4_formBtnTextRegister" id="btn-register"
                         onclick="onClickRegister()">
                         <div class="l4_formBtnText l4_btnNotActive">
-                            <img class="l4_registerText" src="assets/images/l4_btnRegister.png" alt="sam xe tau nha" />
+                            <img class="l4_registerText" src="assets/images/l4_btnRegister-active.png"
+                                alt="sam xe tau nha" />
                         </div>
+                    </div>
+                    <div class="l4_formBtn l4_formBtnLogin" id="btn-login" onclick="onClickLogin()">
+                        <div class="l4_formBtnText l4_formBtnTextLogin">
+                            <img class="l4_loginText" src="assets/images/l4_btnLogin.png" alt="sam xe tau nha" />
+                        </div>
+
                     </div>
                 </div>
                 <form class="l4_form l4_form-register" id="form-register" onsubmit="return onSubmitStep1();">
@@ -252,6 +258,11 @@
 
                     <input id="Password2" name="Password2" class="input-info" type="password"
                         placeholder="&#xf023; Nhập lại mật khẩu" style="font-family:Arial, FontAwesome" required />
+                    <div class="captchaContainer">
+                        <img id="captcha" class="captchaImage" src="" />
+                        <input id="inputCaptcha" name="inputCaptcha" class="input-info input-captcha" type="text"
+                            placeholder="Captcha" style="font-family:Arial, FontAwesome" required />
+                    </div>
                 </form>
                 <form class="l4_form l4_form-login" id="form-login" onsubmit="return onSubmitStep1();">
                     <input id="AccountName" name="AccountName" class="input-info" type="text"
@@ -283,6 +294,34 @@
 
 
     <script>
+
+        window.SSO_URL = "https://apilanding.do99.club";
+        window.REF_URL = "https://dangky.do99.club";
+        reloadCaptcha = () => {
+            $(".input-captcha").val("");
+            $.ajax({
+                url: window.SSO_URL + "/Captcha/Get?length=3&width=95&height=33",
+                method: "GET",
+                success: (response) => {
+                    $(".captchaImage").attr("src", "data:image/jpeg;base64," + response["1"]);
+                    window.captchaVerify = response["0"];
+                }
+            })
+        }
+
+        reloadLinkRef = () => {
+            $.ajax({
+                url: window.SSO_URL + "/AffAPI/Afiliate_Infor",
+                method: "GET",
+                crossDomain: true,
+                xhrFields: { withCredentials: true },
+                success: (response) => {
+                    $("#linkRef").text(window.REF_URL + "?ref=" + response.InviteCode);
+                    $("#linkRef").attr("href", window.REF_URL + "?ref=" + response.InviteCode);
+                }
+            })
+        }
+
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 6,
             spaceBetween: 5,
@@ -296,6 +335,12 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+
+        window.jQuery(document).ready(function ($) {
+            // captcha
+            reloadCaptcha();
+        });
+
 
         let isLogin = true
         const imageUrl = '/assets/images/l4_btnBg.png'
