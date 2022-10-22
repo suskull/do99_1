@@ -25,11 +25,10 @@
 
 
         </div>
-        <div class="l5_btnContainer">
+        <div class="l5_btnContainer l5_btnContainer_android">
             <img class="img-responsive" src="assets/images/l5_btnPlaynow.png" />
             <img class="img-responsive" src="assets/images/l5_ios.png" />
             <img class="img-responsive" src="assets/images/l5_android.png" />
-
         </div>
 
     </div>
@@ -42,6 +41,42 @@
     <script src="assets/js/fontawesome.min.js"></script>
 
     <script>
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            console.log('triggerr')
+
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+
+            return "unknown";
+        }
+
+        $(document).ready(function () {
+            const device = getMobileOperatingSystem()
+
+            const btnAndroid = $('l5_btnContainer_android')
+            console.log(btnAndroid, 'btnAndroid')
+
+            btnAndroid[0].style.display = 'none'
+
+            console.log(device, ' device')
+        });
+
+
+
+
     </script>
 </body>
 
