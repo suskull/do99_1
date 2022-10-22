@@ -38,9 +38,15 @@
             <img class="l5_contentApk" src="/assets/images/l5_guide_apk.png" alt="guide chplay">
         </div>
 
-        <div class="l5_btnContainer l5_btnContainer_android">
+        <div class="l5_btnContainer l5_btnContainer_ios">
             <img class="img-responsive" src="assets/images/l5_btnPlaynow.png" />
             <img class="img-responsive" src="assets/images/l5_ios.png" />
+        </div>
+
+        <div class="l5_btnContainer l5_btnContainer_other">
+            <img class="img-responsive" src="assets/images/l5_btnPlaynow.png" />
+            <img class="img-responsive" src="assets/images/l5_ios.png" />
+            <img class="img-responsive" src="assets/images/l5_android.png" />
         </div>
 
     </div>
@@ -55,8 +61,6 @@
     <script type="application/javascript">
         function getMobileOperatingSystem() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-            console.log('triggerr')
 
             // Windows Phone must come first because its UA also contains "Android"
             if (/windows phone/i.test(userAgent)) {
@@ -79,13 +83,20 @@
             const device = getMobileOperatingSystem()
             const btnAndroid = $('.l5_btnContainer_android')
             const btnIos = $('.l5_btnContainer_ios')
+            const btnOther = $('.l5_btnContainer_other')
 
             if (device === "Android") {
-                btnAndroid[0].style.display = 'block'
+                btnAndroid[0].style.display = 'flex'
                 btnIos[0].style.display = 'none'
-            } else {
+                btnOther[0].style.display = 'none'
+            } else if (device === "iOS") {
+                btnIos[0].style.display = 'flex'
                 btnAndroid[0].style.display = 'none'
-                btnIos[0].style.display = 'block'
+                btnOther[0].style.display = 'none'
+            } else {
+                btnOther[0].style.display = 'flex'
+                btnIos[0].style.display = 'none'
+                btnAndroid[0].style.display = 'none'
             }
 
             // console.log(btnAndroid, 'btnAndroid111')
