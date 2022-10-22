@@ -7,8 +7,10 @@
     background-position: center;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     gap: 8px;
+    padding-top: 32px;
+    padding-bottom: 10%;
 
 }
 
@@ -24,13 +26,42 @@
     width: 75%;
     margin-top: 32px;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.l5_btnAndroid {
+    width: 50% !important;
+}
+
+.l5_contentChPlay {
+    animation: unset !important;
+    width: 50% !important;
+}
+
+.l5_contentApk {
+    display: none;
+    animation: unset !important;
+    width: 50% !important;
 }
 
 .l5_btnContainer img {
     animation: zoom-in-zoom-out 1s ease infinite;
     width: 25%;
     cursor: pointer;
+}
 
+.l5_installContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.l5_installContainer img {
+    flex: 1;
+    max-width: calc(50% - 32px);
+    gap: 20px;
 }
 
 img {
@@ -44,6 +75,7 @@ img {
         background-image: url('../images/bg_landing_c_mobile.webp');
         justify-content: flex-start;
         padding-top: 25%;
+        padding-bottom: 15%;
 
     }
 
@@ -64,7 +96,16 @@ img {
     }
 
     .l5_btnContainer img {
-        width: 100%;
+        width: 100% !important;
+    }
+
+    .l5_installContainer {
+        width: 100% !important;
+    }
+
+    .l5_installContainer img {
+        max-width: calc(50% - 16px);
+
     }
 }
 

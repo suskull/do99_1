@@ -26,9 +26,21 @@
 
         </div>
         <div class="l5_btnContainer l5_btnContainer_android">
+            <img class="img-responsive l5_btnAndroid" src="assets/images/l5_android.png" />
+            <div class="l5_installContainer">
+                <img id="l5_btnInstallChplay" class="img-responsive l5_btnInstallChplay"
+                    src="assets/images/l5_install_chplay_active.png" onclick="onClickChplay()" alt="chplay" />
+                <img id="l5_btnInstallApk" class="img-responsive l5_btnInstallApk"
+                    src="assets/images/l5_install_apk.png" onclick="onClickApk()" alt="andrid" />
+            </div>
+
+            <img class="l5_contentChPlay" src="/assets/images/l5_guide_chplay.png" alt="guide chplay">
+            <img class="l5_contentApk" src="/assets/images/l5_guide_apk.png" alt="guide chplay">
+        </div>
+
+        <div class="l5_btnContainer l5_btnContainer_android">
             <img class="img-responsive" src="assets/images/l5_btnPlaynow.png" />
             <img class="img-responsive" src="assets/images/l5_ios.png" />
-            <img class="img-responsive" src="assets/images/l5_android.png" />
         </div>
 
     </div>
@@ -40,7 +52,7 @@
     <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/js/fontawesome.min.js"></script>
 
-    <script>
+    <script type="application/javascript">
         function getMobileOperatingSystem() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -65,14 +77,58 @@
 
         $(document).ready(function () {
             const device = getMobileOperatingSystem()
+            const btnAndroid = $('.l5_btnContainer_android')
+            const btnIos = $('.l5_btnContainer_ios')
 
-            const btnAndroid = $('l5_btnContainer_android')
-            console.log(btnAndroid, 'btnAndroid')
+            if (device === "Android") {
+                btnAndroid[0].style.display = 'block'
+                btnIos[0].style.display = 'none'
+            } else {
+                btnAndroid[0].style.display = 'none'
+                btnIos[0].style.display = 'block'
+            }
 
-            btnAndroid[0].style.display = 'none'
+            // console.log(btnAndroid, 'btnAndroid111')
 
-            console.log(device, ' device')
+            // btnAndroid[0].style.display = 'none'
+
+            // console.log(device, ' device111')
         });
+
+        const btnChPlay = $('#l5_btnInstallChplay')
+        const btnApk = $('#l5_btnInstallApk')
+        const contentChPlay = $('.l5_contentChPlay')
+        const contentApk = $('.l5_contentApk')
+
+
+        onClickChplay = () => {
+            const btnChPlay = $('#l5_btnInstallChplay')
+            const btnApk = $('#l5_btnInstallApk')
+            const contentChPlay = $('.l5_contentChPlay')
+            const contentApk = $('.l5_contentApk')
+            btnChPlay.attr('src', 'assets/images/l5_install_chplay_active.png');
+            btnApk.attr('src', 'assets/images/l5_install_apk.png')
+
+            contentApk[0].style.display = 'none';
+            contentChPlay[0].style.display = 'block'
+
+
+        }
+
+        onClickApk = () => {
+            const btnChPlay = $('#l5_btnInstallChplay')
+            const btnApk = $('#l5_btnInstallApk')
+            const contentChPlay = $('.l5_contentChPlay')
+            const contentApk = $('.l5_contentApk')
+
+            btnChPlay.attr('src', 'assets/images/l5_install_chplay.png')
+            btnApk.attr('src', 'assets/images/l5_install_apk_active.png')
+
+            contentApk[0].style.display = 'block';
+            contentChPlay[0].style.display = 'none'
+
+
+        }
 
 
 
